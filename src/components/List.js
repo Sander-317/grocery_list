@@ -12,26 +12,23 @@ class List extends React.Component {
         { id: 4, title: "chips" },
       ],
     };
-    this.listHandler = this.listHandler.bind(this);
   }
 
-  listHandler() {
-    const newArray = this.state.groceryItems.map((item) => {
-      return <ListItem id={item.id} title={item.title} />;
-    });
-    console.log(newArray);
-    return newArray;
+  onItemClick(item) {
+    console.log(`Clicked ${item.id}: ${item.title}`);
   }
 
   render() {
     return (
       <div>
         <ul>
-          {this.listHandler()}
-          {/* <ListItem title="steak" />
-          <ListItem title="rice" />
-          <ListItem title="coke" />
-          <ListItem title="chips" /> */}
+          {this.state.groceryItems.map((item) => (
+            <ListItem
+              key={item.id}
+              item={item}
+              clickItem={() => this.onItemClick(item)}
+            />
+          ))}
         </ul>
       </div>
     );
