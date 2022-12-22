@@ -14,6 +14,11 @@ class Container extends React.Component {
       ],
       shoppingListItems: [],
     };
+    this.handleClickGroceryItem = this.handleClickGroceryItem.bind(this);
+  }
+
+  handleClickGroceryItem(item) {
+    console.log("handleClick");
   }
 
   render() {
