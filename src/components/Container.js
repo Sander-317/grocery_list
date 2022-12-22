@@ -12,6 +12,7 @@ class Container extends React.Component {
         { id: 3, title: "coke" },
         { id: 4, title: "chips" },
       ],
+      shoppingListItems: [],
     };
   }
 
