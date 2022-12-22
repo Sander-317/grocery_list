@@ -1,14 +1,11 @@
 import "./App.css";
-import List from "./components/List.js";
-import GroceryList from "./components/GroceryList";
-import ShoppingCart from "./components/ShoppingCart";
+
+import Container from "./components/Container.js";
 
 function App() {
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <GroceryList />
-      <ShoppingCart />
-      <List />
+      <Container />
     </div>
   );
 }
