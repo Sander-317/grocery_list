@@ -25,8 +25,8 @@ class Container extends React.Component {
     return (
       <div>
         container
+        <GroceryList items={this.state.groceryItems} />
         <ShoppingCart />
-        <GroceryList />
       </div>
     );
   }

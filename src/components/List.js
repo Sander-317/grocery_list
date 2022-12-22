@@ -22,7 +22,7 @@ class List extends React.Component {
     return (
       <div>
         <ul>
-          {this.state.groceryItems.map((item) => (
+          {this.props.items.map((item) => (
             <ListItem
               key={item.id}
               item={item}

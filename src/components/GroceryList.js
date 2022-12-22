@@ -1,15 +1,13 @@
 import React from "react";
 import List from "./List";
 
-class GroceryList extends React.Component {
-  render() {
-    return (
-      <div>
-        Grocery List
-        <List />
-      </div>
-    );
-  }
+function GroceryList({ items }) {
+  return (
+    <div>
+      Grocery List
+      <List items={items} />
+    </div>
+  );
 }
 
 export default GroceryList;
