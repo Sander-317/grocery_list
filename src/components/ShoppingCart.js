@@ -1,10 +1,13 @@
 import React from "react";
-// import List from "./List";
+import List from "./List";
 
-class ShoppingCart extends React.Component {
-  render() {
-    return <div>Shopping Cart</div>;
-  }
+function ShoppingCart({ items, onItemClick }) {
+  return (
+    <div>
+      Shopping Cart
+      <List items={items} onItemClick={onItemClick} />
+    </div>
+  );
 }
 
 export default ShoppingCart;
