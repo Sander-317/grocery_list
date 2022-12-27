@@ -1,10 +1,12 @@
 import React from "react";
 import List from "./List";
+import InputField from "./InputField";
 
-function GroceryList({ items, onItemClick }) {
+function GroceryList({ items, onItemClick, onItemAdd }) {
   return (
     <div>
-      Grocery List
+      <h2>shopping List</h2>
+      <InputField onSubmit={onItemAdd} />
       <List items={items} onItemClick={onItemClick} />
     </div>
   );

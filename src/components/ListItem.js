@@ -1,6 +1,6 @@
 import React from "react";
 
-function ListItem({ item, clickItem }) {
+function ListItem({ item, clickItem, showQuantities }) {
   //   console.log(props);
   return (
     <li
@@ -9,7 +9,12 @@ function ListItem({ item, clickItem }) {
       onClick={clickItem}
       value={item.title}
     >
-      {item.title}
+      <div>{item.title}</div>
+      {showQuantities && (
+        <>
+          <div>amount: {item.amount}</div>
+        </>
+      )}
     </li>
   );
 }
