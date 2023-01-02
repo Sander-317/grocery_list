@@ -4,7 +4,7 @@ import Container from "./components/Container.js";
 
 function App() {
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
+    <div className="App">
       <Container />
     </div>
   );

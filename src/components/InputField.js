@@ -12,7 +12,7 @@ function InputField({ onSubmit }) {
   }
 
   return (
-    <div>
+    <div className="input-field">
       <input
         type="text"
         value={inputValue}

@@ -1,0 +1,30 @@
+body {
+  background: green;
+}
+
+.App {
+  text-align: center;
+}
+
+.container {
+  /* display: flex; */
+}
+main {
+  display: flex;
+}
+
+.grocery-list {
+  background: red;
+}
+
+.input-field {
+  background: yellow;
+}
+
+.app-list {
+  background: purple;
+}
+
+.shopping-cart {
+  background: orange;
+}
