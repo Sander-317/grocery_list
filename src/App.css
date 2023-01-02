@@ -16,8 +16,13 @@ header {
 
 .counter li {
   display: inline-block;
-
   margin: 0.5em;
+}
+.counter li:first-child {
+  color: rgb(199, 118, 118);
+}
+.counter li:nth-child(2) {
+  color: rgb(165, 181, 235);
 }
 main {
   display: flex;
