@@ -83,14 +83,16 @@ class Container extends React.Component {
       <div className="container">
         <header>
           <h1>container</h1>
-          <h3> types of items: {this.state.shoppingListItems.length}</h3>
-          <h3>
-            {" "}
-            total amount items:{" "}
-            {this.state.shoppingListItems.reduce((total, item) => {
-              return total + item.amount;
-            }, 0)}{" "}
-          </h3>
+          <ul className="counter">
+            <li> types of items: {this.state.shoppingListItems.length}</li>
+            <li>
+              {" "}
+              total amount items:{" "}
+              {this.state.shoppingListItems.reduce((total, item) => {
+                return total + item.amount;
+              }, 0)}{" "}
+            </li>
+          </ul>
         </header>
         <main>
           <GroceryList
