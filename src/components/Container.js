@@ -82,7 +82,7 @@ class Container extends React.Component {
     return (
       <div className="container">
         <header>
-          <h1>container</h1>
+          <h1>Grocery List</h1>
           <ul className="counter">
             <li> types of items: {this.state.shoppingListItems.length}</li>
             <li>

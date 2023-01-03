@@ -51,6 +51,9 @@ ul.app-list li {
 ul.app-list li:nth-child(2n + 1) {
   background-color: rgb(199, 118, 118);
 }
+.grocery-list ul.app-list li:hover {
+  cursor: pointer;
+}
 
 .shopping-cart ul.app-list li {
   background-color: rgb(165, 181, 235);
