@@ -7,9 +7,9 @@ class Container extends React.Component {
     super(props);
     this.state = {
       groceryItems: [
-        { id: 1, title: "steak" },
-        { id: 2, title: "rice" },
-        { id: 3, title: "coke" },
+        { id: 1, title: "steak", price: "3" },
+        { id: 2, title: "rice", price: "1" },
+        { id: 3, title: "coke", price: "2" },
       ],
       shoppingListItems: [
         { id: 4, title: "chips", amount: 2 },

@@ -12,6 +12,7 @@ class List extends React.Component {
               item={item}
               clickItem={() => this.props.onItemClick(item)}
               showQuantities={this.props.showQuantities}
+              showPice={this.props.showPrice}
             />
           ))}
         </ul>

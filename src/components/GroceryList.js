@@ -7,7 +7,7 @@ function GroceryList({ items, onItemClick, onItemAdd }) {
     <div className="grocery-list">
       <h2>shopping List</h2>
       <InputField onSubmit={onItemAdd} />
-      <List items={items} onItemClick={onItemClick} />
+      <List items={items} onItemClick={onItemClick} showPrice={true} />
     </div>
   );
 }
