@@ -85,8 +85,7 @@ class Container extends React.Component {
 
   render() {
     const formatterEUR = new Intl.NumberFormat("eu-EU", {
-      maximumSignificantDigits: 3,
-      minimumSignificantDigits: 3,
+      maximumFractionDigits: 2,
       style: "currency",
       currency: "EUR",
     });
