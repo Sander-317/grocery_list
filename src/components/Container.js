@@ -64,9 +64,6 @@ class Container extends React.Component {
   };
 
   addItemToGroceryList = (title, price) => {
-    console.log("TITLE=", title);
-    console.log("PRICE=", price, typeof price);
-
     this.setState({
       groceryItems: [
         ...this.state.groceryItems,
