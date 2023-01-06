@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function InputField({ onSubmit }) {
   const [inputValue, setInputValue] = useState("");
-  const [inputNumber, setInputNumber] = useState();
+  const [inputNumber, setInputNumber] = useState("");
 
   function onButtonPress() {
     if (inputValue.length > 0 && inputNumber > 0) {
@@ -27,9 +27,7 @@ function InputField({ onSubmit }) {
         value={inputNumber}
         onChange={(e) => setInputNumber(e.target.value)}
       />
-      <button onClick={onButtonPress} placeholder="add a grocery item">
-        add
-      </button>
+      <button onClick={onButtonPress}>add</button>
     </div>
   );
 }
