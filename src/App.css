@@ -86,3 +86,8 @@ button {
   display: flex;
   justify-content: space-between;
 }
+
+.grocery-list .list-item {
+  display: flex;
+  justify-content: space-between;
+}

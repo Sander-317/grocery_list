@@ -6,7 +6,12 @@ function ShoppingCart({ items, onItemClick, onEmptyClick }) {
     <div className="shopping-cart">
       <h2>Shopping Cart</h2>
       <button onClick={onEmptyClick}>empty shopping cart</button>
-      <List items={items} onItemClick={onItemClick} showQuantities={true} />
+      <List
+        items={items}
+        onItemClick={onItemClick}
+        showQuantities={true}
+        showCost={true}
+      />
     </div>
   );
 }
