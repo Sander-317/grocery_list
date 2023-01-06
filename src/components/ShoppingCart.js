@@ -11,6 +11,7 @@ function ShoppingCart({ items, onItemClick, onEmptyClick }) {
         onItemClick={onItemClick}
         showQuantities={true}
         showCost={true}
+        showPrice={true}
       />
     </div>
   );

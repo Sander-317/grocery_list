@@ -7,13 +7,13 @@ class Container extends React.Component {
     super(props);
     this.state = {
       groceryItems: [
-        { id: 1, title: "steak", price: 3 },
-        { id: 2, title: "rice", price: 1 },
-        { id: 3, title: "coke", price: 2 },
+        { id: 1, title: "steak", price: 3.53 },
+        { id: 2, title: "rice", price: 1.25 },
+        { id: 3, title: "coke", price: 2.43 },
       ],
       shoppingListItems: [
-        { id: 4, title: "chips", price: 1, amount: 2 },
-        { id: 5, title: "redbull", price: 4, amount: 3 },
+        { id: 4, title: "chips", price: 1.15, amount: 2 },
+        { id: 5, title: "redbull", price: 2.51, amount: 3 },
       ],
     };
     this.handleClickGroceryItem = this.handleClickGroceryItem.bind(this);
@@ -81,6 +81,12 @@ class Container extends React.Component {
   };
 
   render() {
+    const formatterEUR = new Intl.NumberFormat("eu-EU", {
+      maximumSignificantDigits: 3,
+      minimumSignificantDigits: 3,
+      style: "currency",
+      currency: "EUR",
+    });
     return (
       <div className="container">
         <header>
@@ -96,11 +102,13 @@ class Container extends React.Component {
             </li>
           </ul>
           <div>
-            total cost: ${" "}
-            {this.state.shoppingListItems.reduce((total, item) => {
-              console.log(item);
-              return total + item.amount * item.price;
-            }, 0)}
+            total cost:{" "}
+            {formatterEUR.format(
+              this.state.shoppingListItems.reduce((total, item) => {
+                console.log(item);
+                return total + item.amount * item.price;
+              }, 0)
+            )}
           </div>
         </header>
         <main>

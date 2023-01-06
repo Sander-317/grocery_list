@@ -1,6 +1,12 @@
 import React from "react";
 
 function ListItem({ item, clickItem, showQuantities, showPice, showCost }) {
+  const formatterEUR = new Intl.NumberFormat("eu-EU", {
+    maximumSignificantDigits: 3,
+    minimumSignificantDigits: 3,
+    style: "currency",
+    currency: "EUR",
+  });
   //   console.log(props);
   return (
     <li
@@ -12,7 +18,7 @@ function ListItem({ item, clickItem, showQuantities, showPice, showCost }) {
       <div>{item.title}</div>
       {showPice && (
         <>
-          <div>price: ${item.price}</div>
+          <div>price: {formatterEUR.format(item.price)}</div>
         </>
       )}
       {showQuantities && (
@@ -22,7 +28,7 @@ function ListItem({ item, clickItem, showQuantities, showPice, showCost }) {
       )}
       {showCost && (
         <>
-          <div>cost: ${item.price * item.amount}</div>
+          <div>cost: {formatterEUR.format(item.price * item.amount)}</div>
         </>
       )}
     </li>
