@@ -63,7 +63,10 @@ class Container extends React.Component {
     });
   };
 
-  addItemToGroceryList = (title) => {
+  addItemToGroceryList = (title, price) => {
+    console.log("TITLE=", title);
+    console.log("PRICE=", price, typeof price);
+
     this.setState({
       groceryItems: [
         ...this.state.groceryItems,
@@ -73,7 +76,7 @@ class Container extends React.Component {
             this.state.shoppingListItems.length +
             1,
           title: title,
-
+          price: price,
           amount: 1,
         },
       ],

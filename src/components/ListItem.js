@@ -2,12 +2,11 @@ import React from "react";
 
 function ListItem({ item, clickItem, showQuantities, showPice, showCost }) {
   const formatterEUR = new Intl.NumberFormat("eu-EU", {
-    maximumSignificantDigits: 3,
-    minimumSignificantDigits: 3,
+    maximumFractionDigits: 2,
     style: "currency",
     currency: "EUR",
   });
-  //   console.log(props);
+
   return (
     <li
       key={item.id}
